@@ -1,12 +1,12 @@
 body {
-  background-color: #09090b;
-  color: #fafafa;
+  background-color: #09090B;
+  color: hsl(0 0% 98%);
   font-family: "Poppins", sans-serif;
 }
 
 :root {
   --my-blue: 212 100% 50%;
-  --background: 0 0% 3.5%;
+  --background: 240 10% 3.9%;
 }
 
 .inter {
@@ -27,7 +27,7 @@ body {
 }
 
 .bg-accent {
-  background-color: rgba(36, 52, 90, 0.4);
+  background-color: #09090B;
 }
 
 [class~="hover:bg-accent"]:hover {
@@ -155,12 +155,20 @@ body {
 }
 
 .image-wrapper {
-  box-shadow: 0 26px 70px rgba(33, 99, 255, 0.18),
-    0 50px 140px rgba(33, 99, 255, 0.1), 0 70px 180px rgba(33, 99, 255, 0.045);
+  box-shadow: 0 10px 30px rgba(33, 99, 255, 0.12),
+    0 20px 50px rgba(33, 99, 255, 0.06);
+}
+
+@media (min-width: 768px) {
+  .image-wrapper {
+    box-shadow: 0 26px 70px rgba(33, 99, 255, 0.18),
+      0 50px 140px rgba(33, 99, 255, 0.1), 0 70px 180px rgba(33, 99, 255, 0.045);
+  }
 }
 
 
 .carrousel-container {
+  margin-top: 10px;
   overflow: hidden;
   width: 80%;
   height: 8rem;
@@ -177,12 +185,10 @@ body {
   pointer-events: none;
   background: linear-gradient(
     to right,
-    #000000 0%,
-    rgba(0, 0, 0, 0.9) 8%,
-    rgba(0, 0, 0, 0) 18%,
-    rgba(0, 0, 0, 0) 82%,
-    rgba(0, 0, 0, 0.9) 92%,
-    #000000 100%
+    hsl(var(--background)) 0%,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0) 70%,
+    hsl(var(--background)) 100%
   );
   z-index: 1;
 }
@@ -228,5 +234,60 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+span {
+  font-size: 0.875rem;
+}
+
+.experience-tab {
+  color: #9ca3af;
+  border-left: 2px solid transparent;
+}
+
+.experience-tab:hover {
+  color: #006DE9;
+}
+
+.experience-tab.active {
+  color: #006DE9;
+  border-left-color: #006DE9;
+  background-color: rgba(0, 110, 233, 0.1);
+}
+
+.experience-content {
+  display: block;
+}
+
+.experience-content.hidden {
+  display: none;
+}
+
+.company-tag {
+  display: block;
+  font-size: 14px !important;
+}
+
+@media (min-width: 640px) {
+  .company-tag {
+    display: inline;
+    font-size: inherit;
   }
 }
