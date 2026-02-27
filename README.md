@@ -57,10 +57,10 @@ matheus-pass-utfpr/
 
 ## Experiência Profissional
 
-- **Verzel** (ABR 2025 - Atual) - Desenvolvedor Full Stack
-- **Cyms Apps** (ABR 2024 - SET 2024) - Desenvolvedor de Software
-- **Marinho Corp** (OUT 2021 - SET 2022) - Engenheiro de Software
-- **Line Telecom** (ABR 2021 - AGO 2021) - Suporte Técnico
+- **Verzel** (Abr 2025 - Atual) - Desenvolvedor Full Stack
+- **Cyms Apps** (Abr 2024 - Set 2024) - Desenvolvedor de Software
+- **Marinho Corp** (Out 2021 - Set 2022) - Engenheiro de Software
+- **Line Telecom** (Abr 2021 - Ago 2021) - Suporte Técnico
 
 ## Características do Design
 
