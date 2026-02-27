@@ -40,6 +40,50 @@
     </style>
   </head>
   <body>
+    <!-- Language Selector -->
+    <div class="fixed top-4 right-4 z-50">
+      <div class="relative">
+        <button
+          id="language-selector-btn"
+          class="flex items-center gap-2 px-3 py-2 rounded-lg border border-accent bg-background/80 backdrop-blur-sm hover:bg-accent transition-all duration-200 cursor-pointer"
+          aria-label="Selecionar idioma"
+        >
+          <span id="current-flag" class="text-xl">🇧🇷</span>
+          <span id="current-lang" class="text-sm text-primary opacity-70">PT-BR</span>
+          <svg
+            id="language-chevron"
+            class="w-4 h-4 text-primary opacity-50 transition-transform duration-200"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div
+          id="language-dropdown"
+          class="absolute right-0 mt-2 w-36 rounded-lg border border-accent bg-background/95 backdrop-blur-sm shadow-lg opacity-0 invisible transition-all duration-200 transform -translate-y-2"
+        >
+          <button
+            class="language-option flex items-center gap-3 w-full px-4 py-3 hover:bg-accent transition-all duration-200 rounded-t-lg cursor-pointer"
+            data-lang="pt-BR"
+            data-flag="🇧🇷"
+          >
+            <span class="text-xl">🇧🇷</span>
+            <span class="text-sm text-primary">Português</span>
+          </button>
+          <button
+            class="language-option flex items-center gap-3 w-full px-4 py-3 hover:bg-accent transition-all duration-200 rounded-b-lg cursor-pointer"
+            data-lang="en-US"
+            data-flag="🇺🇸"
+          >
+            <span class="text-xl">🇺🇸</span>
+            <span class="text-sm text-primary">English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div
       class="absolute -z-40 top-0 left-0 w-full h-screen bg-gradient-to-b from-transparent to-background"
     ></div>
@@ -87,11 +131,11 @@
               <p
                 class="inter text-xs md:text-sm text-primary text-start poppins transition-all"
               >
-                Horário local:
+                <span data-i18n="localTime">Horário local:</span>
                 <span id="local-time-value" class="inter">00:00</span>
               </p>
             </div>
-            <div class="local-time-tooltip" role="tooltip">
+            <div class="local-time-tooltip" role="tooltip" data-i18n="localTimeTooltip">
               Estou no Brasil, GMT-3
             </div>
           </div>
@@ -99,12 +143,13 @@
             <h1 class="inter text-primary text-start poppins font-medium">
               Matheus Pass
             </h1>
-            <p class="inter text-sm md:text-base opacity-60 font-light">
+            <p class="inter text-sm md:text-base opacity-60 font-light" data-i18n="role" data-i18n-options='{"age": "{{age}}"}'>
               <span id="current-age">23</span> anos, Engenheiro de Software
             </p>
           </div>
           <h3
             class="inter lg:text-xl text-lg text-primary poppins text-center md:text-start"
+            data-i18n="bio"
           >
             Penso no produto como um todo, desenvolvendo soluções escaláveis que
             acompanham as demandas do mercado dentro e fora do código.
@@ -190,7 +235,7 @@
               target="_blank"
               class="flex py-3 bg-white hover:bg-white/90 transition-all duration-200 cursor-pointer w-full items-center justify-center rounded-md border border-neutral-700 bg-neutral-900/60"
             >
-              <span class="text-black font-semibold text-center">
+              <span class="text-black font-semibold text-center" data-i18n="contact">
                 Entrar em contato
               </span>
             </a>
@@ -1022,7 +1067,7 @@
         class="flex items-start w-full justify-center flex-col gap-2 max-w-[1000px] px-6 gap-3"
         id="experience-section"
       >
-        <h2 class="opacity-85">Minha experiência:</h2>
+        <h2 class="opacity-85" data-i18n="experienceTitle">Experiência profissional:</h2>
         <div class="flex flex-col sm:flex-row w-full">
           <ul class="flex flex-col py-8 experience-tabs">
             <li
@@ -1054,14 +1099,14 @@
           <!-- Verzel -->
           <div class="experience-content flex-1 sm:p-8" id="verzel">
             <h2 class="text-2xl font-bold text-white mb-1">
-              Desenvolvedor Full Stack
+              <span data-i18n="verzelRole">Desenvolvedor Full Stack</span>
               <span class="text-[#006DE9] company-tag">@Verzel</span>
             </h2>
-            <div class="text-gray-400 mb-6">ABR 2025 - Até o momento</div>
+            <div class="text-gray-400 mb-6" data-i18n="verzelDate">ABR 2025 - Até o momento</div>
             <ul class="text-sm leading-7 space-y-4">
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="verzelDesc1"
                   >Atuo na manutenção e no desenvolvimento fullstack de uma
                   plataforma voltada à automação de atendimentos e gestão de
                   tickets, permitindo que empresas escalem suas interações com
@@ -1070,7 +1115,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="verzelDesc2"
                   >Desenvolvo e mantenho APIs robustas em Java com Quarkus,
                   integradas ao API Gateway da AWS, utilizando comunicação
                   assíncrona com filas SQS e funções Lambda para garantir uma
@@ -1083,14 +1128,14 @@
           <!-- Cyms Apps -->
           <div class="experience-content flex-1 sm:p-8 hidden" id="cyms">
             <h2 class="text-2xl font-bold text-white mb-1">
-              Desenvolvedor de Software
+              <span data-i18n="cymsRole">Desenvolvedor de Software</span>
               <span class="text-[#006DE9] company-tag">@Cyms Apps</span>
             </h2>
-            <div class="text-gray-400 mb-6">ABR 2024 - SET 2024</div>
+            <div class="text-gray-400 mb-6" data-i18n="cymsDate">ABR 2024 - SET 2024</div>
             <ul class="text-sm leading-7 space-y-4">
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="cymsDesc1"
                   >Desenvolvi e implementei um sistema para a área da saúde,
                   incluindo geolocalização baseada no dispositivo do usuário, um
                   sistema de conquistas gamificado e formulários para cadastro e
@@ -1099,7 +1144,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="cymsDesc2"
                   >Reduzi o tempo de implementação de gateways de pagamento em
                   nossas aplicações ao desenvolver uma API centralizada que
                   padronizava e otimizava os endpoints de transações. Essa
@@ -1114,14 +1159,14 @@
           <!-- Marinho Corp -->
           <div class="experience-content flex-1 sm:p-8 hidden" id="marinho">
             <h2 class="text-2xl font-bold text-white mb-1">
-              Engenheiro de Software
+              <span data-i18n="marinhoRole">Engenheiro de Software</span>
               <span class="text-[#006DE9] company-tag">@Marinho Corp</span>
             </h2>
-            <div class="text-gray-400 mb-6">OUT 2021 - SET 2022</div>
+            <div class="text-gray-400 mb-6" data-i18n="marinhoDate">OUT 2021 - SET 2022</div>
             <ul class="text-sm leading-7 space-y-4">
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="marinhoDesc1"
                   >Desenvolvi uma API Python para OCR que extraiu informações de
                   arquivos PDF e imagens com precisão de 95%, reduzindo o tempo
                   manual de processamento e automatizando o processo de
@@ -1130,7 +1175,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="marinhoDesc2"
                   >Implementei pipelines CI/CD no Github e GitLab, permitindo
                   deploy automatizado na AWS via Docker, com versionamento de
                   código e execução de testes automatizados para garantir a
@@ -1139,7 +1184,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="marinhoDesc3"
                   >Dockerizei aplicações Python, facilitando a implementação,
                   escalabilidade e manutenção no servidor por meio de Docker e
                   Docker Compose.</span
@@ -1151,14 +1196,14 @@
           <!-- Line Telecom -->
           <div class="experience-content flex-1 sm:p-8 hidden" id="line">
             <h2 class="text-2xl font-bold text-white mb-1">
-              Suporte Técnico
+              <span data-i18n="lineRole">Suporte Técnico</span>
               <span class="text-[#006DE9] company-tag">@Line Telecom</span>
             </h2>
-            <div class="text-gray-400 mb-6">ABR 2021 - AGO 2021</div>
+            <div class="text-gray-400 mb-6" data-i18n="lineDate">ABR 2021 - AGO 2021</div>
             <ul class="text-sm leading-7 space-y-4">
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="lineDesc1"
                   >Prestei suporte ao cliente presencial e remoto, solucionando
                   problemas técnicos e garantindo uma experiência fluida para os
                   usuários.</span
@@ -1166,7 +1211,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="lineDesc2"
                   >Realizei manutenção e diagnóstico de sistemas em
                   computadores, corrigindo falhas de hardware e software de
                   forma eficiente.</span
@@ -1174,7 +1219,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="lineDesc3"
                   >Desenvolvi e implementei scripts de automação em Python,
                   otimizando tarefas repetitivas e melhorando a eficiência
                   operacional da equipe.</span
@@ -1182,7 +1227,7 @@
               </li>
               <li class="flex items-start text-gray-300">
                 <span class="text-[#006DE9] mr-3">▸</span>
-                <span
+                <span data-i18n="lineDesc4"
                   >Aprimorei habilidades de comunicação e resolução de
                   problemas, traduzindo conceitos técnicos em soluções claras e
                   acessíveis para clientes de diferentes níveis de
@@ -1194,76 +1239,10 @@
         </div>
       </div>
       <footer class="text-center text-sm text-gray-500 mt-20">
-        Criado por Matheus Tem Pass usando HTML e TailwindCSS.<br />
-        © Todos os direitos reservados.
+        <span data-i18n="footerCreated">Criado por Matheus Tem Pass usando HTML e TailwindCSS.</span><br />
+        <span data-i18n="footerRights">© Todos os direitos reservados.</span>
       </footer>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var timeElement = document.getElementById("local-time-value");
-        var ageElement = document.getElementById("current-age");
-        var birthDate = new Date("2001-11-14T00:00:00-03:00");
-
-        function formatToGMTMinus3(date) {
-          var utc = date.getTime() + date.getTimezoneOffset() * 60 * 1000;
-          var gmtMinus3 = new Date(utc + -3 * 60 * 60 * 1000);
-          return gmtMinus3.toLocaleTimeString("pt-BR", {
-            hour: "2-digit",
-            minute: "2-digit",
-            hour12: false,
-          });
-        }
-
-        function updateTime() {
-          if (timeElement) {
-            timeElement.textContent = formatToGMTMinus3(new Date());
-          }
-        }
-
-        function calculateAge(fromDate, referenceDate) {
-          var age = referenceDate.getFullYear() - fromDate.getFullYear();
-          var monthDiff = referenceDate.getMonth() - fromDate.getMonth();
-          var dayDiff = referenceDate.getDate() - fromDate.getDate();
-
-          if (monthDiff < 0 || (monthDiff === 0 && dayDiff < 0)) {
-            age -= 1;
-          }
-
-          return age;
-        }
-
-        function updateAge() {
-          if (ageElement && birthDate instanceof Date && !isNaN(birthDate)) {
-            ageElement.textContent = calculateAge(birthDate, new Date());
-          }
-        }
-
-        updateTime();
-        updateAge();
-        setInterval(updateTime, 60000);
-        setInterval(updateAge, 60 * 60 * 1000);
-
-        // Experience tabs
-        var tabs = document.querySelectorAll(".experience-tab");
-        var contents = document.querySelectorAll(".experience-content");
-
-        tabs.forEach(function (tab) {
-          tab.addEventListener("click", function () {
-            var targetId = this.getAttribute("data-tab");
-
-            tabs.forEach(function (t) {
-              t.classList.remove("active");
-            });
-
-            contents.forEach(function (c) {
-              c.classList.add("hidden");
-            });
-
-            this.classList.add("active");
-            document.getElementById(targetId).classList.remove("hidden");
-          });
-        });
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>

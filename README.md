@@ -1,56 +1,76 @@
-# Matheus Pass | Site Pessoal
+# Matheus Pass | Engenheiro de Software
 
 Site pessoal desenvolvido para apresentar meu perfil profissional, experiência e tecnologias que trabalho.
 
-## 🚀 Sobre
+**URL:** [matheuspass.dev](https://www.matheuspass.dev/)
 
-Site pessoal moderno e responsivo desenvolvido com HTML e TailwindCSS. O site apresenta informações sobre minha trajetória profissional, experiência em diferentes empresas e tecnologias que domino.
+## Sobre
 
-## ✨ Funcionalidades
+Site pessoal moderno e responsivo desenvolvido com HTML e TailwindCSS. O site apresenta informações sobre minha trajetória profissional como Engenheiro de Software, experiência em diferentes empresas e stack de tecnologias.
 
-- **Perfil pessoal**: Apresentação com informações básicas e horário local
+## Funcionalidades
+
+- **Perfil pessoal**: Apresentação com informações básicas, idade dinâmica e horário local (GMT-3)
 - **Links sociais**: Acesso rápido para Instagram, YouTube, LinkedIn e GitHub
-- **Carrossel de tecnologias**: Exibição dinâmica das tecnologias que trabalho
-- **Seção de experiência**: Histórico profissional com detalhes de cada posição
+- **Carrossel de tecnologias**: Exibição animada das tecnologias que trabalho com scroll infinito
+- **Seção de experiência**: Histórico profissional interativo com tabs para cada empresa
 - **Design responsivo**: Interface adaptável para diferentes tamanhos de tela
-- **Animações suaves**: Transições e efeitos visuais para melhor experiência do usuário
+- **Animações suaves**: Transições e efeitos visuais para melhor UX
+- **SEO otimizado**: Meta tags Open Graph e Twitter Cards configurados
+- **Internacionalização (i18n)**: Suporte a Português (PT-BR) e Inglês (EN-US) com seletor de idioma
+  - Tradução de todo o conteúdo do site
+  - Persistência da preferência de idioma no localStorage
+  - Atualização dinâmica de título e meta tags SEO
 
-## 🛠️ Tecnologias Utilizadas
+## Stack de Tecnologias
 
-- **HTML5**: Estrutura semântica do site
+### Site
+- **HTML5**: Estrutura semântica
 - **CSS3**: Estilização customizada
-- **TailwindCSS**: Framework CSS utilitário para design moderno
-- **JavaScript**: Funcionalidades interativas (atualização de horário, tabs de experiência)
+- **TailwindCSS v4**: Framework CSS utilitário via CDN
+- **JavaScript**: Funcionalidades interativas
 
-## 📁 Estrutura do Projeto
+### Tecnologias que trabalho
+Tailwind, TypeScript, React, Python, Node.js, Next.js, Styled Components, MongoDB, PostgreSQL, C#, Git, Linux, Supabase
+
+## Estrutura do Projeto
 
 ```
 matheus-pass-utfpr/
-├── img/                    # Imagens e ícones
+├── img/                    # Ícones SVG
 │   ├── email.svg
-│   ├── favicon.ico
 │   ├── github.svg
 │   ├── instagram.svg
 │   ├── linkedin.svg
 │   ├── pattern.svg
-│   ├── profilePic.webp
 │   └── youtube.svg
 ├── links/                  # Páginas adicionais
 │   └── index.html
+├── CNAME                   # Domínio customizado
 ├── index.html              # Página principal
+├── main.js                 # JavaScript (traduções, interações, horário)
+├── robots.txt              # Configuração de crawlers
+├── sitemap.xml             # Mapa do site
 ├── styles.css              # Estilos customizados
 └── README.md               # Documentação
 ```
 
-## 🎨 Características do Design
+## Experiência Profissional
 
-- **Tema escuro**: Interface com fundo escuro para melhor legibilidade
-- **Gradientes**: Efeitos de gradiente para elementos visuais
-- **Tipografia**: Uso das fontes Inter e Poppins do Google Fonts
-- **Animações**: Efeitos de hover e transições suaves
-- **Layout flexível**: Design que se adapta a diferentes dispositivos
+- **Verzel** (ABR 2025 - Atual) - Desenvolvedor Full Stack
+- **Cyms Apps** (ABR 2024 - SET 2024) - Desenvolvedor de Software
+- **Marinho Corp** (OUT 2021 - SET 2022) - Engenheiro de Software
+- **Line Telecom** (ABR 2021 - AGO 2021) - Suporte Técnico
 
-## 🔧 Como Usar
+## Características do Design
+
+- **Tema escuro**: Interface com fundo #09090b
+- **Gradientes**: Efeitos de gradiente em elementos visuais
+- **Tipografia**: Fontes Inter e Poppins do Google Fonts
+- **Animações**: Hover effects, transições suaves e carrossel infinito
+- **Layout flexível**: Design responsivo com Flexbox
+
+## Como Usar
 
 1. Clone o repositório:
 ```bash
@@ -62,13 +82,13 @@ git clone https://github.com/eumts/matheus-pass-utfpr.git
 # Usando Python
 python -m http.server 8000
 
-# Usando Node.js (com http-server)
+# Usando Node.js
 npx http-server
 ```
 
 3. Acesse `http://localhost:8000` no navegador
 
-## 📱 Responsividade
+## Responsividade
 
 O site é totalmente responsivo e otimizado para:
 - Desktop (1920px+)
@@ -76,9 +96,14 @@ O site é totalmente responsivo e otimizado para:
 - Tablet (768px - 1023px)
 - Mobile (320px - 767px)
 
+## Contato
+
 **Matheus Pass**
 - LinkedIn: [@matheusetp](https://www.linkedin.com/in/matheusetp/)
+- GitHub: [@eumts](https://github.com/eumts/)
+- Instagram: [@devmts_](https://www.instagram.com/devmts_/)
+- YouTube: [@devmts](https://www.youtube.com/@devmts)
 
 ---
 
-Criado com ❤️ por Matheus Tem Pass usando HTML e TailwindCSS.
+Criado por Matheus Tem Pass usando HTML e TailwindCSS.
