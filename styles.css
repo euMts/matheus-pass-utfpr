@@ -104,7 +104,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url("/matheus-pass-utfpr/img/pattern.svg");
+  background-image: url("img/pattern.svg");
   background-repeat: repeat;
   background-size: auto;
   z-index: -50;
