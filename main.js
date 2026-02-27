@@ -33,7 +33,16 @@ document.addEventListener("DOMContentLoaded", function () {
       footerCreated: "Criado por Matheus Tem Pass usando HTML e TailwindCSS.",
       footerRights: "© Todos os direitos reservados.",
       pageTitle: "Matheus Pass | Engenheiro de Software",
-      metaDescription: "Matheus Pass - Engenheiro de Software. Penso no produto como um todo, desenvolvendo soluções escaláveis que acompanham as demandas do mercado."
+      metaDescription: "Matheus Pass - Engenheiro de Software. Penso no produto como um todo, desenvolvendo soluções escaláveis que acompanham as demandas do mercado.",
+      educationTitle: "Formação acadêmica:",
+      utfprDegree: "Tecnólogo em Sistemas para Internet",
+      utfprDate: "Ago 2025 - Ago 2028",
+      utfprDesc1: "Minha segunda graduação foi em Tecnologia em Sistemas para a Internet, período em que ampliei meus conhecimentos em desenvolvimento web, backend e trabalho em equipe. Nesse processo, também fortaleci minha experiência com versionamento de código e colaboração em projetos, sempre com foco em organização e eficiência.",
+      utfprDesc2: "Ao longo dessa formação, mantive a prioridade em boas práticas de desenvolvimento, performance e construção de soluções de forma colaborativa. Essa vivência contribuiu para consolidar ainda mais minha base técnica e minha capacidade de atuar em diferentes contextos do desenvolvimento de software.",
+      fagDegree: "Bacharelado em Engenharia de Software",
+      fagDate: "Jan 2020 - Jan 2024",
+      fagDesc1: "Durante minha graduação em Engenharia de Software, desenvolvi habilidades em desenvolvimento full stack, arquitetura de software e metodologias ágeis, como Scrum e Kanban. Participei de projetos colaborativos utilizando Git e GitHub, além de atuar na criação de APIs RESTful e microsserviços com Node.js, Python e bancos de dados SQL e NoSQL.",
+      fagDesc2: "Também aprofundei meus conhecimentos em CI/CD, testes automatizados, documentação de sistemas e otimização de performance. Esse processo me permitiu desenvolver aplicações escaláveis com React, Next.js e integrações com serviços em nuvem, sempre com foco em soluções práticas para problemas reais."
     },
     "en-US": {
       localTime: "Local time:",
@@ -64,7 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
       footerCreated: "Created by Matheus Tem Pass using HTML and TailwindCSS.",
       footerRights: "© All rights reserved.",
       pageTitle: "Matheus Pass | Software Engineer",
-      metaDescription: "Matheus Pass - Software Engineer. I think about the product as a whole, developing scalable solutions that keep up with market demands."
+      metaDescription: "Matheus Pass - Software Engineer. I think about the product as a whole, developing scalable solutions that keep up with market demands.",
+      educationTitle: "Education:",
+      utfprDegree: "Associate Degree in Internet Systems",
+      utfprDate: "Aug 2025 - Aug 2028",
+      utfprDesc1: "My second degree was in Internet Systems Technology, during which I expanded my knowledge in web development, backend, and teamwork. In this process, I also strengthened my experience with code versioning and project collaboration, always focusing on organization and efficiency.",
+      utfprDesc2: "Throughout this program, I maintained a priority on development best practices, performance, and building solutions collaboratively. This experience contributed to further consolidating my technical foundation and my ability to work in different software development contexts.",
+      fagDegree: "Bachelor's Degree in Software Engineering",
+      fagDate: "Jan 2020 - Jan 2024",
+      fagDesc1: "During my Software Engineering degree, I developed skills in full stack development, software architecture, and agile methodologies such as Scrum and Kanban. I participated in collaborative projects using Git and GitHub, as well as working on RESTful APIs and microservices with Node.js, Python, and SQL/NoSQL databases.",
+      fagDesc2: "I also deepened my knowledge in CI/CD, automated testing, system documentation, and performance optimization. This process allowed me to develop scalable applications with React, Next.js, and cloud service integrations, always focusing on practical solutions to real problems."
     }
   };
 
